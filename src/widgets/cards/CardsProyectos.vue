@@ -2,6 +2,7 @@
 import ButtonHab from "../buttons/ButtonHab.vue";
 import Laravel from "../../imgs/svg/laravel.svg";
 import sass from "../../imgs/svg/sass-logo.svg";
+import svgphp from '../../imgs/svg/php.svg';
 import vue from "../../imgs/svg/vue.svg";
 import svgWp from "../../imgs/svg/wordpress-logo_59483.svg";
 import svgElm from "../../imgs/svg/elementor_5968697.svg";
@@ -25,11 +26,11 @@ defineProps({
 </script>
 
 <template>
-    <div class="row-column align-center justify-center pt-4">
-        <div class="card-exp-img p-0 text-center" style="z-index: 10;">
-            <img style="border-radius: 100%;width: 10rem;" :src="img" alt="">
+    <div class="row-column align-center justify-center pt-4 pt-tablet-1">
+        <div class="card-exp-img p-0 text-center d-none-mobile" style="z-index: 7;">
+            <img :src="img" alt="">
         </div>
-        <div class="card-edu p-1 pt-4" style="margin-top: -4rem;">
+        <div class="card-proy p-1 pt-4 pt-mobile-1">
             <h3 class="text-center w-100" style="font-size: 1.4rem;">{{title}}</h3>
                 <template v-if="numCard === 1">
                 <div class="card-stickers py-1">
@@ -45,6 +46,16 @@ defineProps({
                 <div class="card-stickers py-1">
                     <ButtonHab :svg="svgWp" textBtn="Wordpress" bgColor="#87A2E6" color="#3858e9" />
                 <ButtonHab :svg="svgElm" textBtn="Elementor" bgColor="#C33EE6" color="#660044" />
+                <ButtonHab :svg="svgfigma" textBtn="Figma" bgColor="#1e1e1e" color="#fff" />
+                <ButtonHab :svg="svgIllustrator" textBtn="Illustrator" bgColor="#fe9b00" color="#330000" />
+                <ButtonHab :svg="svgCss" textBtn="CSS" bgColor="#A9BAC7" color="#1d80c1" />
+                <ButtonHab :svg="svgHtml" textBtn="HTML" bgColor="#D99B66" color="#fc490b" />
+                    </div>
+                </template>
+                <template v-if="numCard === 3">
+                <div class="card-stickers py-1">
+                <ButtonHab :svg="svgphp" textBtn="Php" bgColor="#607bbe" color="#fff" />
+                <ButtonHab :svg="sass" textBtn="Sass" bgColor="#C33EE6" color="#fff" />
                 <ButtonHab :svg="svgfigma" textBtn="Figma" bgColor="#1e1e1e" color="#fff" />
                 <ButtonHab :svg="svgIllustrator" textBtn="Illustrator" bgColor="#fe9b00" color="#330000" />
                 <ButtonHab :svg="svgCss" textBtn="CSS" bgColor="#A9BAC7" color="#1d80c1" />

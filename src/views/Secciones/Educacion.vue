@@ -13,10 +13,26 @@ const sa = new Sa();
 
 <template>
     <div class="container">
-        <div class="d-flex justify-center g-2">
+        <div class="box-edu d-none-tablet d-none-mobile">
             <CardsSmall :title="asir.title" :img="asir.img" :link="asir.link" />
              <CardsSmall :title="daw.title" :img="daw.img" :link="daw.link" />
              <CardsSmall :title="sa.title" :img="sa.img" :link="sa.link" />
+        </div>
+        <div class="d-none d-block-tablet d-none-mobile pt-4">
+            <div class="d-flex justify-center align-center pt-3">
+                <CardsSmall :title="asir.title" :img="asir.img" :link="asir.link" />
+                 <CardsSmall :title="daw.title" :img="daw.img" :link="daw.link" />
+            </div>
+            <div class="d-flex justify-center align-center" style="margin-top: -1rem;">
+                <CardsSmall :title="sa.title" :img="sa.img" :link="sa.link" />
+            </div>
+        </div>
+        <div class="d-none d-tablet-none d-block-mobile pt-4">
+            <div class="row-column" style="gap: 0rem;">
+                <CardsSmall :title="asir.title" :img="asir.img" :link="asir.link" />
+                <CardsSmall :title="daw.title" :img="daw.img" :link="daw.link" />
+                <CardsSmall :title="sa.title" :img="sa.img" :link="sa.link" />
+            </div>
         </div>
     </div>
 </template>

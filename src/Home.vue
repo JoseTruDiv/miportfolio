@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import Header from './views/Header.vue'
+import HeaderGeneral from './widgets/header/HeaderGeneral.vue';
+import HeaderMobile from './widgets/header/HeaderMobile.vue';
 </script>
 
 <template>
-   <Header/>
+    <HeaderGeneral/>
+    <HeaderMobile/>
     <main>
       <router-view></router-view>
     </main>

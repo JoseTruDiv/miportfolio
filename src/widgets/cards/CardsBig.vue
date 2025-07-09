@@ -19,13 +19,14 @@ defineProps({
 </script>
 
 <template>
-    <div class="d-flex justify-center pt-2" style="height: 65vh;">
+    <div class="box-card-big pt-2">
         <div class="d-flex w-90">
             <div class="card-exp-img p-0 text-center">
-            <div style="width: 100%; height: 100%; border-radius: 1rem 0rem 0rem 1rem; overflow: hidden;"><img :src="img" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 1rem 0rem 0rem 1rem;">
+            <div>
+              <img :src="img" alt="" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
         </div>
-        <div class="card-exp px-2 py-3 w-100">
+        <div class="card-exp px-2 py-3 w-100 row-column justify-center">
             <h3 class="w-100">{{title}}</h3>
             <p class="text py-1">{{desc}}</p>
             <template v-if="numCard === 1">
